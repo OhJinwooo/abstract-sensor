@@ -4,6 +4,7 @@ describe('Sensor 요구사항 테스트', () => {
     beforeEach(() => {
         jest.useFakeTimers();
     });
+    
 
     afterEach(() => {
         jest.clearAllTimers();
@@ -12,6 +13,7 @@ describe('Sensor 요구사항 테스트', () => {
     test('꺼져 있는 기기는 언제든 켤 수 있다.', () => {
         const sensor = new Sensor('id1');
         expect(sensor.powerStatus).toEqual('off');
+        console.log('id1')
 
         sensor.turn('on');
         expect(sensor.powerStatus).toEqual('on');
