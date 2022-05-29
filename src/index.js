@@ -3,6 +3,7 @@ class Sensor {
         this.powerStatus = 'off'
         this.status = ''
         this.reportingInterval = 10000;
+        console.log(this.reportingInterval)
 
     }
     turn(click){
@@ -17,13 +18,15 @@ class Sensor {
         if(click === 'off') {
             this.powerStatus = 'off'
             this.status = ''
-            this.reportingInterval = 10000
         
         }
         
+        
     }
     advanceTimersByTime(report) {
+        getMilliseconds(this.reportingInterval)
     }
+    
     
 
 }
